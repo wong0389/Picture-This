@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,9 +12,44 @@
   <header class="header">
     <div class="title">
       <h1>Picture This!</h1>
-      <h4>My Really Cool Blog Post</h4>
+      <h4>booyeah</h4>
     </div>
-    <img src="images/museum.jpg" alt="placeholder">
+
+    <!--
+      let different image size for different viewports 
+    -->
+    <picture>
+
+      <!--
+        When the viewport is 960px or wider... we use square...
+        better 4 computer
+      -->
+      <source
+        media="(min-width: 960px)"
+        srcset="
+          images/museum-320x320.jpg 320w,
+          images/museum-480x480.jpg 480w,
+          images/museum-720x720.jpg 720w,
+          images/museum-960x960.jpg 960w
+        "
+        sizes="50vw"
+      >
+
+      <!--
+        for phone or viewport smaller than 960x :3
+      -->
+      <img
+        src="images/museum-480.jpg"
+        srcset="
+          images/museum-320x.jpg 320w,
+          images/museum-480.jpg 480w,
+          images/museum-720x.jpg 720w,
+          images/museum-960x.jpg 960w
+        "
+        sizes="100vw"
+        alt="Museum interior"
+      >
+    </picture>
 
   </header>
 </body>

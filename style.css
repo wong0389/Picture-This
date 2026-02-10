@@ -7,6 +7,7 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+
 .header {
   display: grid;
   grid-template-columns: 1fr;
@@ -29,10 +30,18 @@ h4 {
   font-weight: 300;
 }
 
+/*
+keep ratio and responsive photo sizing...
+*/
 img {
   display: block;
+  width: 100%;
+  height: auto;
 }
 
+/*
+  hen 960x and more become two column
+*/
 @media (min-width: 960px) {
   .header {
     grid-template-columns: repeat(2, 1fr);
